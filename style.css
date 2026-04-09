@@ -1,109 +1,89 @@
 :root {
-    --bg-color: #f4f7f6;
-    --sidebar-color: #2c3e50;
-    --accent-blue: #3498db;
-    --text-dark: #333;
-    --white: #ffffff;
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --text: #334155;
+    --border: #e2e8f0;
 }
 
 body {
-    background-color: var(--bg-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--light);
     margin: 0;
-    color: var(--text-dark);
 }
 
-.dashboard {
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
     display: flex;
-    min-height: 100vh;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: white;
+    border-bottom: 1px solid var(--border);
 }
 
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    background: var(--sidebar-color);
-    color: var(--white);
-    padding: 30px;
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); }
+.logo span { color: var(--primary); }
+nav a { text-decoration: none; color: var(--text); margin-left: 20px; font-size: 0.9rem; transition: 0.3s; }
+nav a:hover { color: var(--primary); }
+
+/* Hero */
+.hero {
     text-align: center;
+    padding: 60px 20px;
+    background: white;
 }
 
-.profile-img {
-    width: 80px;
-    height: 80px;
-    background: var(--accent-blue);
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+.hero h1 { margin: 0; font-size: 2.5rem; color: var(--dark); }
+.subtitle { font-weight: 600; color: var(--primary); margin-top: 5px; }
+.objective { max-width: 700px; margin: 20px auto; color: #64748b; }
 
-.eligibility-check {
-    margin-top: 40px;
-    text-align: left;
-    font-size: 0.9rem;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.green { background-color: #2ecc71; }
-
-/* Main Content */
-.main-content {
-    flex: 1;
-    padding: 40px;
-}
-
-.grid {
+/* Layout Grid */
+.main-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
     margin-top: 30px;
 }
 
-.card {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+.section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
 
-/* Skill Bars */
-.skill-bar {
-    margin-bottom: 15px;
-    font-size: 0.85rem;
-}
-
-.fill {
-    height: 8px;
-    background: var(--accent-blue);
-    border-radius: 4px;
-    margin-bottom: 5px;
-}
-
-/* Tags */
-.tag {
+.section-title {
+    font-size: 1.2rem;
+    color: var(--dark);
+    border-bottom: 2px solid var(--primary);
     display: inline-block;
-    background: #e1e8ed;
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    margin: 5px;
-    color: var(--sidebar-color);
-    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
 }
 
-.log-entry {
-    border-left: 3px solid var(--accent-blue);
-    padding-left: 15px;
-    margin-top: 15px;
-    font-size: 0.95rem;
+/* Items */
+.item-header { display: flex; justify-content: space-between; align-items: baseline; }
+.experience-item h3, .project-item h3 { margin: 0; color: var(--dark); font-size: 1.1rem; }
+.location { color: var(--primary); font-size: 0.9rem; margin: 5px 0; }
+ul { padding-left: 20px; margin-top: 10px; }
+li { margin-bottom: 8px; font-size: 0.95rem; }
+
+.skill-group { margin-bottom: 15px; }
+.skill-group h4 { margin: 0; font-size: 0.9rem; color: var(--dark); }
+.skill-group p { margin: 2px 0; font-size: 0.85rem; color: #64748b; }
+
+.edu-item { margin-bottom: 15px; border-left: 3px solid var(--border); padding-left: 10px; }
+.edu-item p { margin: 0; font-size: 0.85rem; }
+
+@media (max-width: 768px) {
+    .main-layout { grid-template-columns: 1fr; }
 }
