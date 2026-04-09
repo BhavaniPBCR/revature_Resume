@@ -1,6 +1,6 @@
 body {
     background-color: #f0f0f0;
-    font-family: 'Times New Roman', Times, serif; /* Matches the image's classic look */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
     color: #000;
     line-height: 1.4;
     margin: 0;
