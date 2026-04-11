@@ -4,15 +4,17 @@ body {
     color: #000;
     line-height: 1.4;
     margin: 0;
-    padding: 40px 0;
+    padding: 20px 0; /* Reduced padding for cleaner screen view */
 }
 
 .resume-container {
     background-color: #fff;
-    width: 800px;
+    width: 210mm; /* Standard A4 Width */
+    min-height: 297mm; /* Standard A4 Height */
     margin: 0 auto;
-    padding: 50px;
+    padding: 15mm; /* Standard professional margin */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* CRITICAL: Keeps padding inside the 210mm width */
 }
 
 .header {
@@ -22,22 +24,23 @@ body {
 
 .header h1 {
     margin: 0;
-    font-size: 24px;
-    letter-spacing: 1px;
+    font-size: 22pt; /* Point size is better for printing than px */
+    letter-spacing: 0.5px;
 }
 
 .subtitle {
-    margin: 5px 0;
-    font-size: 18px;
+    margin: 2px 0;
+    font-size: 14pt;
 }
 
 .contact {
-    font-size: 13px;
+    font-size: 10pt;
 }
 
 .contact a {
-    color: blue;
-    text-decoration: underline;
+    color: #000; /* Professional black for printing */
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
 }
 
 .section {
@@ -45,9 +48,9 @@ body {
 }
 
 .section-title {
-    font-size: 16px;
+    font-size: 12pt;
     font-weight: bold;
-    border-bottom: 2px solid #000;
+    border-bottom: 1.5pt solid #000;
     margin-bottom: 8px;
     padding-bottom: 2px;
 }
@@ -55,30 +58,41 @@ body {
 .item-header {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 10.5pt;
+    font-weight: bold;
 }
 
-.item p, .edu-item, .section p {
-    font-size: 14px;
-    margin: 5px 0;
+.item p, .edu-item, .section p, li {
+    font-size: 10pt;
+    margin: 4px 0;
 }
 
 ul {
     margin: 5px 0;
-    padding-left: 20px;
+    padding-left: 18px;
 }
 
-li {
-    font-size: 13.5px;
-    margin-bottom: 4px;
-}
-
-.edu-item {
-    margin-bottom: 10px;
-}
-
-/* For printing as a PDF */
+/* THE PRINT ENGINE FIXES */
 @media print {
-    body { background: none; padding: 0; }
-    .resume-container { box-shadow: none; width: 100%; margin: 0; }
+    body { 
+        background: white; 
+        padding: 0; 
+    }
+    
+    .resume-container { 
+        box-shadow: none; 
+        width: 100%; /* Spans exactly to paper width */
+        margin: 0; 
+        padding: 10mm; /* Extra safety margin for home printers */
+    }
+
+    @page {
+        size: A4;
+        margin: 0; /* Removes browser-added URL/Date headers */
+    }
+
+    /* Prevents section headers from appearing at the very bottom of a page */
+    .section {
+        page-break-inside: avoid;
+    }
 }
