@@ -1,113 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PUPPAM BHAVANI CHANDRIKA - Resume</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puppam Bhavani Chandrika - Resume</title>
+
+<style>
+  @page {
+    size: A4;
+    margin: 2cm;
+  }
+
+  body {
+    width: 21cm;
+    min-height: 29.7cm;
+    margin: 0 auto;
+    padding: 1cm;
+    font-family: Cambria, Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+    color: #000;
+    background: white;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .contact {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+  }
+
+  .section {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .section h2 {
+    border-bottom: 1px solid #444;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  .project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .link-symbol {
+    color: #E50914; /* CogniFlix Red */
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+</style>
 </head>
+
 <body>
 
-<div class="resume-container">
-    <header class="header">
-        <h1>PUPPAM BHAVANI CHANDRIKA</h1>
-        <p class="subtitle">Software Engineer</p>
-        <p class="contact">
-            <a href="mailto:puppambhavani40@gmail.com">puppambhavani40@gmail.com</a> | 
-            +91 8106956956 | India | 
-            <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
-        </p>
-    </header>
+<h1>Puppam Bhavani Chandrika</h1>
 
-    <section class="section">
-        <h2 class="section-title">WORK EXPERIENCE</h2>
-        <div class="item">
-            <div class="company-row">
-                <strong>Chervic Advisory Services</strong>
-            </div>
-            <div class="item-header">
-                <span class="role">Front-End Developer Intern</span>
-                <span class="date">July 2025 – Jan 2026</span>
-            </div>
-            <ul>
-                <li>Developed 5+ responsive web modules using <strong>HTML, CSS, and JavaScript</strong>, achieving 100% cross-browser compatibility.</li>
-                <li>Boosted deployment efficiency by <strong>30%</strong> by orchestrating automated CI/CD pipelines via <strong>GitHub Actions</strong>.</li>
-                <li>Resolved 20+ technical bugs logged in GitHub Issues, significantly improving site architecture.</li>
-                <li>Facilitated 15+ peer code reviews via Pull Requests, ensuring high code quality and seamless API integration.</li>
-                <li>Collaborated with backend engineers to integrate frontend components with <strong>RESTful APIs</strong>, improving data speed by 15%.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">EDUCATION</h2>
-        <div class="item">
-            <div class="item-header">
-                <strong>Gates Institute of Technology</strong>
-                <span class="date">2021 – 2025</span>
-            </div>
-            <p>B.Tech in Computer Science (AI) — 7.79/10 CGPA</p>
-        </div>
-        <div class="item">
-            <div class="item-header">
-                <strong>Narayana Junior College</strong>
-                <span class="date">2019 – 2021</span>
-            </div>
-            <p>Intermediate (MPC) — 91%</p>
-        </div>
-    </section>
-
-   <section class="section">
-        <h2 class="section-title">PROJECTS</h2>
-        
-        <div class="item">
-            <div class="item-header">
-                <strong>CogniFlix – AI-Powered Movie Streaming Interface 
-                    <a href="https://bhavani12-p.github.io/My_CogniFlix-Stream/" class="project-symbol" title="View Live Demo">🔗</a>
-                </strong>
-                <span class="date">Feb 2026 – Present</span>
-            </div>
-            <ul>
-                <li>Developed a high-performance, responsive streaming UI inspired by Netflix, utilizing **CSS Grid and Flexbox** for seamless cross-device compatibility.</li>
-                <li>Engineered a "Modern Premium" brand identity using **CSS-Webkit gradients** and multi-layer text shadows to simulate cinematic lighting effects.</li>
-                <li>Optimized system reliability and load performance by implementing **local asset hosting** and relative pathing for high-resolution media.</li>
-                <li>Designed the frontend architecture to support future integration with **Polyglot Microservices** for personalized AI recommendations.</li>
-            </ul>
-        </div>
-
-        <div class="item" style="margin-top: 15px;">
-            <div class="item-header">
-                <strong>Smart Traffic Monitoring Dashboard 
-                    <a href="https://github.com/Bhavani12-P/Smart-Traffic-Monitoring" class="project-symbol" title="View Repository">🔗</a>
-                </strong>
-                <span class="date">Dec 2024 – Apr 2025</span>
-            </div>
-            <ul>
-                <li>Engineered a desktop GUI using <strong>Tkinter</strong> to visualize real-time traffic data from CNN models with 92% accuracy.</li>
-                <li>Integrated automated visual alerts, reducing manual traffic monitoring by approximately 40%.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">SKILLS</h2>
-        <ul class="skills-list">
-            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Responsive Design, React.js</li>
-            <li><strong>Collaboration:</strong> GitHub (PRs, Issues, Actions), CI/CD Pipelines, Version Control</li>
-            <li><strong>Tools/Testing:</strong> VS Code, Git, Webpack, Manual Testing, Debugging, Web Vitals</li>
-            <li><strong>Principles:</strong> SDLC, Agile/Scrum, Object-Oriented Programming (OOP)</li>
-        </ul>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title">CERTIFICATIONS</h2>
-        <ul class="cert-list">
-            <li>Frontend Development Internship Certificate – Chervic Advisory Services</li>
-            <li>Full Stack Web Development – Foundation Certification</li>
-            <li>NPTEL Certification – Internet of Things (IoT)</li>
-        </ul>
-    </section>
+<div class="contact">
+  Email: bhavanipuppam@gmail.com | Phone: +91-8106956956 |
+  LinkedIn: linkedin.com/in/bhavanipuppam
 </div>
+
+<section class="section">
+  <h2>CAREER OBJECTIVE</h2>
+  <p>
+    To obtain an entry-level Frontend Developer position that offers opportunities for learning, professional growth, and meaningful contribution to the organization.
+  </p>
+</section>
+
+<section class="section">
+    <h2>WORK EXPERIENCE</h2>
+    <ul>
+      <li>
+        <strong>Front-End Developer Intern | Chervic Advisory Services</strong> (July 2025 – Jan 2026)
+        <br>• Developed 5+ responsive web modules using HTML, CSS, and JavaScript with 100% cross-browser compatibility.
+        <br>• Orchestrated CI/CD pipelines via GitHub Actions, improving deployment efficiency by 30%.
+      </li>
+    </ul>
+</section>
+
+<section class="section">
+  <h2>PROJECTS</h2>
+  <ul>
+    <li>
+      <div class="project-title">
+        <strong>CogniFlix Stream – AI-Powered Movie Interface</strong>
+        <a href="https://bhavani12-p.github.io/My_CogniFlix-Stream//" class="link-symbol" title="Live Demo">🔗</a>
+      </div>
+      • Developed a high-performance, cinematic streaming UI using CSS Grid and Flexbox for seamless cross-device responsiveness.<br>
+      • Implemented a "Modern Premium" aesthetic featuring custom multi-layer text shadows and gradients for a professional brand identity.<br>
+    </li>
+    <br>
+    <li>
+      <div class="project-title">
+        <strong>Smart Traffic Monitoring Dashboard</strong>
+        <a href="https://bhavani12-p.github.io/Smart-Traffic-Monitoring-Dashboard/" class="link-symbol" title="GitHub Repository">🔗</a>
+      </div>
+      • Built a real-time traffic monitoring GUI using Python and Tkinter to visualize data pipelines.<br>
+      • Integrated CNN models achieving 92% classification accuracy to automate congestion detection.
+    </li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>TECHNICAL SKILLS</h2>
+  <ul>
+    <li><strong>Programming:</strong> Java, Python, SQL, JavaScript</li>
+    <li><strong>Frontend:</strong> HTML5, CSS3, Responsive Design</li>
+    <li><strong>collaborations:</strong> GitHub (PRs, Issues, Actions), CI/CD Pipelines, VS Code</li>
+    <li><strong>Tools/Testing:</strong> VS Code, Git, Webpack, Manual Testing </li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>EDUCATION</h2>
+  <ul>
+    <li>
+      <strong>B.Tech – Computer Science (Artificial Intelligence)</strong><br>
+      GATES Institute of Technology (2021–2025) – CGPA: 7.89
+    </li>
+    <li>
+      <strong>Intermediate (MPC)</strong><br>
+      Narayana Junior College (2019–2021) – 91%
+    </li>
+      <li>
+          <strong>SSC (10th)</strong>
+          Minerva E.M. High School (2018-2019) - CGPA: 9.8
+      </li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>PERSONAL DETAILS</h2>
+  <ul>
+    <li><strong>Gender:</strong> Female</li>
+    <li>Date of Birth: Nov 06, 2003</li>
+    <li><strong>Languages:</strong> Telugu, English, Hindi</li>
+    <li><strong>Hobbies:</strong> Video Editing, Langage Acquition</li>
+  </ul>
+</section>
 
 </body>
 </html>
